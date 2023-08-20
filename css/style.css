@@ -1,0 +1,93 @@
+:root {
+    --animate-duration: 1s;
+    --animate-delay: 0.3s;
+ }
+ body,
+ html,
+ main {
+    background: linear-gradient(45deg, #abc9cf 0%, rgba(225, 5, 34, 0) 70%)  , linear-gradient(135deg, rgb(23, 3, 97) 10%, rgba(49, 5, 209, 0) 80%) , linear-gradient(225deg, rgb(104, 243, 241) 10%, rgba(10, 219, 216, 0) 80%), rgba(0, 0, 0, 0) linear-gradient(315deg, rgb(54, 165, 128) 100%, rgba(9, 245, 5, 0) 70%);
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: translate3d(0, 0, 0);
+
+
+ }
+ 
+ 
+ #inCorrect,
+ #correct {
+    font-size: 0.65rem;
+ }
+ main {
+    background-color: #201920;
+    overflow-y: auto;
+    line-height: 0;
+    will-change: auto;
+ }
+ 
+ ::-webkit-scrollbar {
+    width: 10px;
+ }
+ ::-webkit-scrollbar-track {
+    background-color: #abc9cf;
+ }
+ 
+ h1 {
+    color: transparent;
+    background: linear-gradient(180deg, #08203e 60%, #557c93 60%) no-repeat;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-stroke: 1px #fff;
+    background-size: 100% 180%;
+    animation: gradient 5s infinite alternate;
+    -webkit-animation: gradient 5s infinite alternate;
+}
+ @keyframes gradient {
+    0% {
+       transform: rotate(0);
+       background-position-y: 0;
+    }
+    50% {
+       transform: rotate(7deg);
+       background-position-y: 100%;
+    }
+    100% {
+       transform: rotate(-7deg);
+       background-position-y: 0;
+    }
+ }
+ section {
+    backdrop-filter: blur(2px);
+    background-color: rgb(100 100 100 / 0.1) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+      font-family:Georgia, 'Times New Roman', Times, serif !important; 
+}
+#setting h3{
+    color: #08203e;
+}
+.form-select,.form-control{
+    background-color: transparent;
+}
+::placeholder{
+    color: #fff;
+}
+ #quiz,
+ #finsish,
+ #inCorrect,
+ #correct,
+ #alertNumber,
+ #setting,
+ #alertAns {
+    display: none;
+ }
+ .show {
+    display: block !important;
+ }
+ 

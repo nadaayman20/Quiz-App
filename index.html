@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+     <!--Animate CSS CDN-->
+     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!--Main Css File-->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main id="particles-js" class="position-relative">
+        <div class="container start-50 top-50 position-absolute py-2 translate-middle px-5">
+
+            <div class="main-title mb-3">
+                <h1 class="text-uppercase text-center fw-bold display-1">Quiz App</h1>
+            </div>
+
+             <!-- --------- Start Settings --------- -->
+            <section id="setting" class="card py-3 animate__animated animate__backInRight show">
+                <h2 class="text-center card-title text-white">Setting Your Quiz</h2>
+                <div class="card-body col-md-9 mx-md-auto">
+                    <div class="category">
+                        <h3 class="h4 mb-3">Category</h3>
+                        <select name="" id="category" class="form-select p-2">
+                             <option value="0" selected disabled>Select Your Category</option>
+                             <option value="9">Genral Knowledge</option>
+                             <option value="10">Entertainment: Books</option>
+                             <option value="11">Entertainment: Film</option>
+                             <option value="12">Entertainment: Music</option>
+                             <option value="15">Entertainment: Video Games</option>
+                             <option value="16">Entertainment: Borad Games</option>
+                             <option value="21">Sports</option>
+                             <option value="27">Animals</option>
+                             <option value="15">Video Games</option>
+                             <option value="23">History</option>
+                        </select>
+                    </div>
+
+                    <div class="Difficulty my-4">
+                        <h3 class="h4 mb-3">Difficulty</h3>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" name="difficulty" value="easy" id="easy" checked>
+                            <label class="form-check-label mt-2 ms-3 " for="easy">
+                                Easy
+                            </label>
+                          </div>
+                          <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" name="difficulty" value="medium" id="medium" >
+                            <label class="form-check-label mt-2 ms-3 " for="medium">
+                                Medium
+                            </label>
+                          </div>
+                          <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" name="difficulty" value="hard" id="hard" >
+                            <label class="form-check-label mt-2 ms-3" for="hard">
+                                Hard
+                            </label>
+                          </div>
+                    </div>
+
+                    <div class="amount my-4">
+                       
+                        <div class="mb-3">
+                            <h3 class="h4 mb-3">Number of Questions</h3>
+                            <input id="amount" type="number" class="form-control" placeholder=" " value="0" min="1" max="50" />
+                          </div>
+                     </div>
+
+                     <div class="btn-section d-flex justify-content-end my-3">
+                        <button class="btn btn-light rounded-pill py-2 px-4 fs-5" id="start">Start</button>
+                     </div>
+
+                     <p id="alertNumber" class="alert alert-danger mt-3 col-8 text-center">Please enter number of question between 1 and 50</p>
+
+                </div>
+
+            </section>
+             <!-- --------- End Settings --------- -->
+
+              <!-- --------- Start Quiz --------- -->
+              <section id="quiz" class="card py-3 animate__animated animate__backInRight py-5">
+                <h2 class="text-center card-title text-white">Quiz</h2>
+
+                <span id="inCorrect" class="badge text-bg-danger float-start ms-5 p-2 text-uppercase">inCorrect</span>
+                <span id="correct" class="badge text-bg-success float-start ms-5 p-2 text-uppercase">Correct</span>
+
+                <span class="badge text-bg-light p-3 rounded-pill float-end mx-4">
+                    <div class="clearfix"></div>
+                    <span  class="fs-6"><span id="from" ></span> OF <span id="to"></span> Question</span ></span>
+
+                <div class="card-body col-md-9 mx-md-auto mt-5">
+                    <div class="question-content mt-4">
+                        <h3 class="h3 text-center">Q: <span class="h4" id="questionTitle"></span></h3>
+                        <div id="questionContent" class=" pt-5 mb-3">
+                            
+                        </div>
+                    </div>
+
+                     <div class="btn-section d-flex justify-content-end my-3">
+                        <button class="btn btn-light rounded-pill py-2 px-4 fs-5" id="nextBtn">Next</button>
+                     </div>
+
+                     <p id="alertAns" class="alert alert-danger mt-3 col-8 small text-center">Select Answer...</p>
+
+                </div>
+
+            </section>
+              <!-- --------- End Quiz --------- -->
+
+              <!-- --------- Start Finish --------- -->
+              <section id="finsish" class="card py-3 animate__animated animate__backInRight py-5  ">
+                <h2 class="text-center card-title text-white">Finish</h2>
+                <div class="card-body col-md-9 mx-md-auto">
+                    <div class="question-content text-center">
+                        <h3>Your Score is </h3>
+                        <h4 class="display-1 mt-4" id="score"></h4>
+                    </div>
+
+                     <div class="btn-section d-flex justify-content-center my-3">
+                        <button class="btn btn-light rounded-pill py-2 px-4 fs-5" id="end">Try again ?</button>
+                     </div>
+
+
+                </div>
+
+            </section>
+              <!-- --------- End Finish --------- -->
+        </div>
+    </main>
+    
+    <script src="./js/jquery-3.6.3.min.js"></script>
+    <script src="./js/particles.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js" type="module"></script>
+</body>
+</html>
